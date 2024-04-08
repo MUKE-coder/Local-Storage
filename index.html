@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="header">
+      <h2>Contacts</h2>
+      <button id="addContactBtn">Add Contact</button>
+    </div>
+    <div class="contacts">
+      <div class="contact">
+        <a href="#">
+          <div class="name">
+            <p>John Doe</p>
+          </div>
+          <p>+256 782301289</p>
+        </a>
+        <div class="editing-features">
+          <button><i class="bx bxs-edit-alt"></i></button>
+          <button><i class="bx bx-trash"></i></button>
+        </div>
+      </div>
+    </div>
+    <div class="user-card-container"></div>
+    <div class="contactsForm">
+      <h3>New Contact</h3>
+      <form id="submissionForm" action="">
+        <div class="form-field">
+          <label for="name">Full Name</label>
+          <input type="text" id="name" placeholder="John Doe" />
+        </div>
+        <div class="form-field">
+          <label for="phoneNumber">Phone number</label>
+          <input type="text" id="phoneNumber" placeholder="+256 781384479" />
+        </div>
+        <div class="dtn">
+          <button id="cancelBtn" type="button" class="cancelBtn">Cancel</button>
+          <button id="createBtn" class="createBtn">Create</button>
+        </div>
+      </form>
+    </div>
+    <button onclick="download({name:'JB'})">Download</button>
+    <div class="tabs">
+      <button
+        id="contactTab"
+        onclick="setActiveTab('contact')"
+        class="activceTab"
+      >
+        All Contacts
+      </button>
+      <button id="trashTab" onclick="setActiveTab('trash')">Trash</button>
+    </div>
+    <div class="tab-content">
+      <div class="contact-content">
+        <p>Contact Content</p>
+      </div>
+      <div class="trash-content hideTabContent">
+        <p>Trash Content</p>
+      </div>
+    </div>
+    <script src="app.js"></script>
+  </body>
+</html>
